@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    padding: 80px ;
+    perspective: 700px ;
+}
+section {
+    position: relative;
+    transform-style: preserve-3d;
+}
+section  , .front , .back {
+    margin:auto;
+    width: 230px;
+    height: 350px;
+    background-color: blue;
+    transition: all 2s;
+}
+.back {
+    background-color: red;
+    transform: rotateY(180deg);
+}
+.front , .back {
+    position: absolute;
+}
+.front {
+    z-index: 1 ;
+    backface-visibility: hidden ;
+}
+section:hover {
+    transform: rotateY(180deg);
+}
